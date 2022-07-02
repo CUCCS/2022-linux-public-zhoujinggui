@@ -30,7 +30,7 @@
     Codename:       focal
     ```
 
-![查询-Linux发行版本](.\picture\查询-Linux发行版本.jpg)
+![查询-Linux发行版本](picture/查询-Linux发行版本.jpg)
 
   - 当前 Linux 内核版本信息
 
@@ -42,11 +42,11 @@
     Linux cuc-lab 5.4.0-107-generic #121-Ubuntu SMP Thu Mar 24 16:04:27 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
     ```
 
-![查询-Linux内核版本](.\picture\查询-Linux内核版本.jpg)
+![查询-Linux内核版本](picture/查询-Linux内核版本.jpg)
 
 - 阿里云 云上 Linux 
 
-![查询-云上版本](.\picture\查询-云上版本.jpg)
+![查询-云上版本](picture/查询-云上版本.jpg)
 
 
 
@@ -64,7 +64,7 @@ ls /lib/systemd/system
 
 查看是否有`rc-local.service`这个文件
 
-![查看rc_local.service文件](.\picture\查看rc_local.service文件.png)
+![查看rc_local.service文件](picture/查看rc_local.service文件.png)
 
 ##### 2.1.2 修改该文件权限
 
@@ -95,7 +95,7 @@ $vi /lib/systemd/system/rc-local.service //打开文件
 按ESC进入命令模式，输入A进入编辑
 添加[Install] 段后再按ESC键，输入`：wq`保存并退出；再打开查看脚本内容是否被修改：
 
-![增加Install](.\picture\增加Install.png)
+![增加Install](picture/增加Install.png)
 
 ##### 2.1.3 编写`rc.local`文件
 
@@ -113,7 +113,7 @@ echo "看到这行字，说明添加自启动脚本成功。" > /usr/local/test.
 exit 0
 ```
 
-![自启动成功标志](.\picture\自启动成功标志.png)
+![自启动成功标志](picture/自启动成功标志.png)
 
 - 赋予权限
 
@@ -219,7 +219,7 @@ sudo ln -s /lib/systemd/system/rc.local.service /etc/systemd/system/
 $ sudo apt-get install ssh
 ```
 
-![下载ssh](.\picture\下载ssh.jpg)
+![下载ssh](picture/下载ssh.jpg)
 
 ##### 4.1.2 加密设置
 
@@ -231,13 +231,13 @@ $ ssh-keygen -t rsa //ras为加密算法，还可以使用des算法
 
 ​	即可输入`ll .ssh`查询用户目录下的公私钥文件
 
-![查看-文件更新](.\picture\查看-文件更新.jpg)
+![查看-文件更新](picture/查看-文件更新.jpg)
 
 ##### 4.1.3 文件内容累加
 
 使用`cat id_rsa>> authorized_keys`命令将`id_rsa`(私钥)文件中的内容累加写入到`~/.ssh/authorized_keys`文件中。
 
-![累加至已认证文件](picture\累加至已认证文件.jpg)
+![累加至已认证文件](picture/累加至已认证文件.jpg)
 
 
 
@@ -251,13 +251,13 @@ $ ssh-keygen -t rsa //ras为加密算法，还可以使用des算法
 
 - 首先进行在虚拟机中`ip a`查找IP地址
 
-![虚拟机IP查询](picture\虚拟机IP查询.png)
+![虚拟机IP查询](picture/虚拟机IP查询.png)
 
 - 再在**CMD（或get bash）**中输入`ssh cuc@+IP地址`尝试免密登录
 
   因为我在课上已经跟着操作一遍，所以可以直接登录。
 
-![SSH免密登录1](picture\SSH免密登录1.png)
+![SSH免密登录1](picture/SSH免密登录1.png)
 
 - 删除免密登录相关文件后再进行免密登录时，会提示需输入密码：
 
@@ -283,9 +283,9 @@ $ ssh cuc@+ip地址
 //输入`exit`可退出登录状态
 ```
 
-![ssh配置-1](picture\ssh配置-1.png)
+![ssh配置-1](picture/ssh配置-1.png)
 
-​	![ssh配置-2](picture\ssh配置-2.png)
+​	![ssh配置-2](picture/ssh配置-2.png)
 
 
 
